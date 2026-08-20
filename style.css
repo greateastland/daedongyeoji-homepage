@@ -1,7 +1,7 @@
 * { margin:0; padding:0; box-sizing:border-box; }
 html { scroll-behavior: smooth; }
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Malgun Gothic", "Apple SD Gothic Neo", sans-serif;
+  font-family: var(--font-gothic);
   color: var(--text-dark);
   background: var(--light-bg);
   line-height: 1.6;
@@ -21,16 +21,18 @@ img { max-width:100%; display:block; }
   --text-muted: #6b6258;
   --border: #ddd6ca;
   --max-width: 1200px;
+  --font-gothic: -apple-system, BlinkMacSystemFont, "Malgun Gothic", "Apple SD Gothic Neo", sans-serif;
+  --font-batang: "Batang", "바탕", "Apple SD 산돌명조 Neo1", "Nanum Myeongjo", serif;
 }
 
 .section-inner { max-width: var(--max-width); margin:0 auto; padding: 80px 24px; }
 .section-eyebrow { color: var(--gold); letter-spacing:.08em; text-transform:uppercase; font-size:.85rem; margin-bottom:16px; }
-.section-title { font-size: clamp(1.6rem,3vw,2.2rem); margin-bottom:48px; color: var(--text-dark); }
+.section-title { font-family: var(--font-batang); font-size: clamp(1.6rem,3vw,2.2rem); margin-bottom:48px; color: var(--text-dark); }
 
 /* Nav */
 .nav { position: sticky; top:0; z-index:100; background: rgba(27,18,12,0.92); backdrop-filter: blur(6px); }
 .nav-inner { max-width: var(--max-width); margin:0 auto; padding: 16px 24px; display:flex; align-items:center; justify-content:space-between; }
-.logo { color: var(--white); font-size:1.25rem; font-weight:700; letter-spacing:.05em; }
+.logo { font-family: var(--font-batang); color: var(--white); font-size:1.25rem; font-weight:700; letter-spacing:.05em; }
 .nav-links { display:flex; gap:32px; }
 .nav-links a { color: var(--white); font-size:.95rem; opacity:.85; transition: opacity .2s; }
 .nav-links a:hover { opacity:1; color: var(--gold); }
@@ -52,7 +54,7 @@ img { max-width:100%; display:block; }
 }
 .hero-inner { position:relative; z-index:1; padding: 24px; }
 .hero-eyebrow { color: var(--gold); letter-spacing:.2em; text-transform:uppercase; margin-bottom:20px; font-size:.9rem; }
-.hero-title { font-size: clamp(3rem, 10vw, 6rem); font-weight:800; letter-spacing:.02em; margin-bottom:24px; }
+.hero-title { font-family: var(--font-batang); font-size: clamp(3rem, 10vw, 6rem); font-weight:800; letter-spacing:.02em; margin-bottom:24px; }
 .hero-tagline { font-size: clamp(1.1rem, 2.5vw, 1.5rem); color: var(--white); opacity:.9; }
 
 /* About (dark) */
@@ -63,7 +65,7 @@ img { max-width:100%; display:block; }
 .about-text-col { display:flex; flex-direction:column; gap:16px; }
 .about-text { opacity:.85; }
 .mission { border-top: 1px solid rgba(255,255,255,0.15); padding-top:48px; }
-.mission-title { font-size: clamp(1.4rem,3vw,2rem); font-weight:700; margin: 16px 0; }
+.mission-title { font-family: var(--font-batang); font-size: clamp(1.4rem,3vw,2rem); font-weight:700; margin: 16px 0; }
 .mission-sub { opacity:.8; }
 
 /* Services (light) */
@@ -90,7 +92,7 @@ img { max-width:100%; display:block; }
 .contact { background: var(--dark-bg); color: var(--white); }
 .contact .section-title { color: var(--white); }
 .contact-card { background: var(--dark-bg-alt); border-radius:16px; padding:40px; max-width:640px; }
-.contact-name { font-size:1.3rem; font-weight:700; margin-bottom:12px; }
+.contact-name { font-family: var(--font-batang); font-size:1.3rem; font-weight:700; margin-bottom:12px; }
 .contact-career, .contact-cert { color: rgba(245,241,234,0.75); font-size:.9rem; margin-bottom:8px; }
 .contact-buttons { display:flex; gap:16px; margin-top:24px; flex-wrap:wrap; }
 .btn { padding:14px 28px; border-radius:8px; font-weight:600; font-size:.95rem; }
