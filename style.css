@@ -2,8 +2,8 @@
 html { scroll-behavior: smooth; }
 body {
   font-family: var(--font-gothic);
-  color: var(--text-dark);
-  background: var(--light-bg);
+  color: var(--white);
+  background: var(--dark-bg);
   line-height: 1.6;
 }
 a { text-decoration:none; color:inherit; }
@@ -13,21 +13,19 @@ img { max-width:100%; display:block; }
 
 :root {
   --dark-bg: #1b120c;
-  --dark-bg-alt: #2a1c12;
+  --dark-bg-alt: #241810;
   --gold: #c9a86a;
   --white: #fdf6ea;
-  --light-bg: #f2e6d3;
-  --light-bg-alt: #e9d8ba;
-  --text-dark: #362a1d;
-  --text-muted: #7a6650;
-  --border: #d9c6a5;
+  --text-muted: rgba(253,246,234,0.65);
+  --card-bg: rgba(253,246,234,0.05);
+  --border: rgba(253,246,234,0.14);
   --max-width: 1200px;
   --font-gothic: "Nanum Gothic", -apple-system, BlinkMacSystemFont, "Malgun Gothic", "Apple SD Gothic Neo", sans-serif;
 }
 
 .section-inner { max-width: var(--max-width); margin:0 auto; padding: 80px 24px; }
 .section-eyebrow { color: var(--gold); letter-spacing:.08em; text-transform:uppercase; font-size:.85rem; margin-bottom:16px; }
-.section-title { font-size: clamp(1.6rem,3vw,2.2rem); margin-bottom:48px; color: var(--text-dark); }
+.section-title { font-size: clamp(1.6rem,3vw,2.2rem); margin-bottom:48px; color: var(--white); }
 
 /* Nav */
 .nav { position: sticky; top:0; z-index:100; background: rgba(27,18,12,0.92); backdrop-filter: blur(6px); }
@@ -58,52 +56,51 @@ img { max-width:100%; display:block; }
 .hero-title { font-size: clamp(3rem, 10vw, 6rem); font-weight:800; letter-spacing:.02em; }
 .hero-tagline { font-size: clamp(1.1rem, 2.5vw, 1.5rem); color: var(--white); opacity:.9; }
 
-/* About (dark) */
-.about { background: var(--dark-bg); color: var(--white); }
-.about .section-title { color: var(--white); }
+/* About */
+.about { background: var(--dark-bg-alt); }
 .about-grid { display:grid; grid-template-columns: 1fr 1fr; gap:40px; margin-bottom:64px; align-items:center; }
 .about-image { border-radius:8px; }
 .about-text-col { display:flex; flex-direction:column; gap:16px; }
-.about-text { opacity:.85; }
-.mission { border-top: 1px solid rgba(255,255,255,0.15); padding-top:48px; }
+.about-text { color: var(--text-muted); }
+.mission { border-top: 1px solid var(--border); padding-top:48px; }
 .mission-title { font-size: clamp(1.4rem,3vw,2rem); font-weight:700; margin: 16px 0; }
-.mission-sub { opacity:.8; }
+.mission-sub { color: var(--text-muted); }
 
-/* Services (light) */
-.services { background: var(--light-bg); }
+/* Services */
+.services { background: var(--dark-bg); }
 .service-grid { display:grid; grid-template-columns: repeat(3, 1fr); gap:24px; }
-.service-card { background: var(--white); border:1px solid var(--border); border-radius:12px; padding:32px; }
+.service-card { background: var(--card-bg); border:1px solid var(--border); border-radius:12px; padding:32px; }
 .service-card h3 { font-size:1.15rem; margin-bottom:8px; }
 .service-quote { color: var(--gold); font-weight:600; font-size:.9rem; margin-bottom:12px; }
 .service-card p:not(.service-quote) { color: var(--text-muted); font-size:.95rem; }
 
 /* Portfolio */
-.portfolio { background: var(--light-bg-alt); }
+.portfolio { background: var(--dark-bg-alt); }
 .portfolio-grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(260px,1fr)); gap:20px; }
-.portfolio-card { background: var(--white); border:1px solid var(--border); border-radius:10px; padding:24px; }
-.portfolio-card h3 { font-size:1.05rem; margin-bottom:8px; color: var(--text-dark); }
+.portfolio-card { background: var(--card-bg); border:1px solid var(--border); border-radius:10px; padding:24px; }
+.portfolio-card h3 { font-size:1.05rem; margin-bottom:8px; color: var(--white); }
 .portfolio-card p { color: var(--text-muted); font-size:.9rem; }
 
 /* Clients */
-.clients { background: var(--light-bg); }
+.clients { background: var(--dark-bg); }
 .clients-list { display:flex; flex-wrap:wrap; gap:12px 16px; }
 .section-note { color: var(--text-muted); font-size:.9rem; margin-top:-32px; margin-bottom:32px; }
-.clients-list li { background: var(--white); border:1px solid var(--border); border-radius:999px; padding:8px 18px; font-size:.9rem; color: var(--text-muted); }
+.clients-list li { background: var(--card-bg); border:1px solid var(--border); border-radius:999px; padding:8px 18px; font-size:.9rem; color: var(--text-muted); }
 
 /* Contact */
-.contact { background: var(--dark-bg); color: var(--white); }
-.contact .section-title { color: var(--white); }
-.contact-card { background: var(--dark-bg-alt); border-radius:16px; padding:40px; max-width:640px; }
+.contact { background: var(--dark-bg-alt); }
+.contact-card { background: var(--card-bg); border:1px solid var(--border); border-radius:16px; padding:40px; max-width:640px; }
 .contact-name { font-size:1.3rem; font-weight:700; margin-bottom:12px; }
-.contact-cert { color: rgba(245,241,234,0.75); font-size:.9rem; margin-bottom:4px; }
-.contact-buttons { display:flex; gap:16px; margin-top:24px; flex-wrap:wrap; }
-.contact-note { color: rgba(245,241,234,0.6); font-size:.85rem; margin-top:16px; }
-.btn { padding:14px 28px; border-radius:8px; font-weight:600; font-size:.95rem; }
-.btn-primary { background: var(--gold); color: var(--dark-bg); }
-.btn-outline { border:1px solid var(--gold); color: var(--gold); }
+.contact-cert { color: var(--text-muted); font-size:.9rem; margin-bottom:4px; }
+.contact-phone { display:flex; align-items:baseline; gap:10px; flex-wrap:wrap; margin-top:24px; }
+.contact-phone-label { color: var(--text-muted); font-size:.85rem; }
+.contact-phone a { color: var(--gold); font-size:1.1rem; font-weight:700; }
+.contact-phone a:hover { text-decoration: underline; }
+.contact-phone-dot { color: var(--text-muted); }
+.contact-note { color: var(--text-muted); font-size:.85rem; margin-top:16px; }
 
 /* Footer */
-.footer { background: var(--dark-bg); color: rgba(245,241,234,0.6); text-align:center; padding:32px 24px; font-size:.85rem; border-top:1px solid rgba(255,255,255,0.1); }
+.footer { background: var(--dark-bg); color: var(--text-muted); text-align:center; padding:32px 24px; font-size:.85rem; border-top:1px solid var(--border); }
 .footer p { margin-bottom:4px; }
 
 @media (max-width: 768px) {
@@ -115,6 +112,5 @@ img { max-width:100%; display:block; }
   .nav-toggle { display:flex; }
   .about-grid { grid-template-columns: 1fr; }
   .service-grid { grid-template-columns: 1fr; }
-  .contact-buttons { flex-direction:column; }
   .contact-card { padding:24px; }
 }
