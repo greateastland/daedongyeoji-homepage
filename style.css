@@ -14,12 +14,12 @@ img { max-width:100%; display:block; }
   --dark-bg: #1b120c;
   --dark-bg-alt: #2a1c12;
   --gold: #c9a86a;
-  --white: #f5f1ea;
-  --light-bg: #faf8f5;
-  --light-bg-alt: #f1ede6;
-  --text-dark: #2b2620;
-  --text-muted: #6b6258;
-  --border: #ddd6ca;
+  --white: #fdf6ea;
+  --light-bg: #f2e6d3;
+  --light-bg-alt: #e9d8ba;
+  --text-dark: #362a1d;
+  --text-muted: #7a6650;
+  --border: #d9c6a5;
   --max-width: 1200px;
   --font-gothic: -apple-system, BlinkMacSystemFont, "Malgun Gothic", "Apple SD Gothic Neo", sans-serif;
   --font-batang: "Batang", "바탕", "Apple SD 산돌명조 Neo1", "Nanum Myeongjo", serif;
@@ -53,8 +53,9 @@ img { max-width:100%; display:block; }
   pointer-events:none;
 }
 .hero-inner { position:relative; z-index:1; padding: 24px; }
+.hero-box { display:inline-block; border: 1px solid rgba(253,246,234,0.55); padding: clamp(32px,6vw,64px) clamp(32px,8vw,80px); margin-bottom:40px; }
 .hero-eyebrow { color: var(--gold); letter-spacing:.2em; text-transform:uppercase; margin-bottom:20px; font-size:.9rem; }
-.hero-title { font-family: var(--font-batang); font-size: clamp(3rem, 10vw, 6rem); font-weight:800; letter-spacing:.02em; margin-bottom:24px; }
+.hero-title { font-family: var(--font-batang); font-size: clamp(3rem, 10vw, 6rem); font-weight:800; letter-spacing:.02em; }
 .hero-tagline { font-size: clamp(1.1rem, 2.5vw, 1.5rem); color: var(--white); opacity:.9; }
 
 /* About (dark) */
