@@ -7,6 +7,7 @@ body {
   line-height: 1.6;
 }
 a { text-decoration:none; color:inherit; }
+p, h1, h2, h3 { word-break: keep-all; overflow-wrap: break-word; }
 ul { list-style:none; }
 img { max-width:100%; display:block; }
 
@@ -86,6 +87,7 @@ img { max-width:100%; display:block; }
 /* Clients */
 .clients { background: var(--light-bg); }
 .clients-list { display:flex; flex-wrap:wrap; gap:12px 16px; }
+.section-note { color: var(--text-muted); font-size:.9rem; margin-top:-32px; margin-bottom:32px; }
 .clients-list li { background: var(--white); border:1px solid var(--border); border-radius:999px; padding:8px 18px; font-size:.9rem; color: var(--text-muted); }
 
 /* Contact */
